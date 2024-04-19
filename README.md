@@ -1,6 +1,6 @@
 # Chatly
 ### Libraries
-pip install flask
+pip install flask<br>
 pip install flask-socketio
 
 ### Figma
