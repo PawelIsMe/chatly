@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+	<title>C H A T L Y</title>
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, window.location.href );
+		}
+	</script>
+</head>
+<body>
+	<p class="logo">C H A T L Y</p>
+	<div class="main-container">
+		<div class="left-side">
+			<form class="login-container" method="POST">
+				<h1 class="t1">Login</h1>
+        <label>User</label>
+				<input name="user" class="input-username" type="text" placeholder="Jimmy" autofocus="autofocus" required>
+        <label>Password</label>
+				<input name="password" class="input-password" type="password" placeholder="●●●●●●" required>
+				<p style="color:red">{{ blad1 }}</p>
+				<button class="login-button" onclick="toggle()">LOG IN</button>
+				<a href="register" style="margin:0; margin-top: 2.5em; color: #9A9A9A; text-decoration: none; float: right;">Sign up</a>
+			</form>
+		</div>
+		<div class="right-side">
+
+		</div>
+	</div>
+</body>
+</html>

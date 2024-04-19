@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='chat.css') }}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='animations.js') }}"></script>
+    <title>C H A T L Y</title>
+  </head>
+  <body>
+    <div class="main-container2" id="blur">
+      <div class="side-bar" id="bar">
+        <p class="logo2" onclick="toggleSidebar()">C H A T L Y</p>
+        <p style="text-align: center; margin: 0; margin-top: 16px; margin-bottom: 32px; font-size: 25; font-weight: 400;">Welcome {{ session['user'] }}!</p>
+        <p class="bar-text" style="color: #58D68D">Groups</p>
+        <a>General group</a>
+
+       
+        <p class="logout" onclick="leave()"><i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 1em;"></i>Log out</p>
+      </div>
+      <div class="chat-content">
+        <div class="top-bar">
+          <p>General group</p>
+        </div>
+        <div class="chat-area" id="conversation">
+          <div id="my_user" hidden="hidden" class="msg_sv">{{session['user']}}</div>
+          {{ chat_history|safe }}
+        </div>
+        <div class="bottom-container">
+          <input type="text" onkeydown="onSendEnter(this)" placeholder="Your message" autofocus="autofocus"/>
+        </div>
+      </div>
+    </div>
+    <div id="popup">
+      <img src="{{ url_for('static',filename='ok.png') }}" width="100" height="100">
+      <h2>Welcome <p style="display: inline; color: green;">{{ session['user'] }}</p>!</h2>
+	  </div>
+  </body>
+</html>

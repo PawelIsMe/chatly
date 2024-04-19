@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+	<title>C H A T L Y</title>
+</head>
+<body>
+	<p class="logo">C H A T L Y</p>
+	<div class="main-container">
+		<div class="left-side">
+			<form class="login-container" method="POST">
+				<h1 class="t1">Create an account</h1>
+				<div style="width: 100%; text-align: center; display: inline-block;">
+          <div style="display:inline-block; width: 49%">
+            <label class="t2">First name</label>
+            <input name="fname" class="input-other" type="text" placeholder="James" autofocus="autofocus" required>
+          </div>
+          <div style="display:inline-block; width: 49%">
+            <label class="t2">Last name</label>
+            <input name="lname" class="input-other" type="text" placeholder="Adams" required>
+          </div>
+				</div>
+        <label>User</label>
+				<input name="user" class="input-username" type="text" placeholder="Jimmy" required>
+        <label>Password</label>
+				<input name="password" class="input-password" type="password" placeholder="●●●●●●" required>
+				<p style="color:red">{{ blad2 }}</p>
+				<button class="login-button" onclick="toggle()">SIGN UP</button>
+				<a href="/" style="margin:0; margin-top: 2.5em; color: #9A9A9A; text-decoration: none; float: right;">Log in</a>
+			</form>
+		</div>
+		<div class="right-side">
+
+		</div>
+	</div>
+</body>
+</html>
