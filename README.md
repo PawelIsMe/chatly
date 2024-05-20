@@ -1,4 +1,7 @@
 # Chatly
+### Description
+This is the chat to communicate with your relatives in local network!
+
 ### Libraries
 pip install flask<br>
 pip install flask-socketio
